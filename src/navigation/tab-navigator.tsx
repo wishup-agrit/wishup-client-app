@@ -21,11 +21,11 @@ export default function TabLayout({ navigation }) {
         tabBarActiveTintColor: 'black',
       }}>
       <Tab.Screen
-        name="One"
+        name="Home"
         component={One}
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
             <Pressable onPress={() => navigation.navigate('Modal')}>
               {({ pressed }) => (
@@ -41,11 +41,35 @@ export default function TabLayout({ navigation }) {
         }}
       />
       <Tab.Screen
-        name="Two"
+        name="Task"
         component={Two}
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Tasks',
+          tabBarIcon: ({ color }) => <TabBarIcon name="bookmark" color={color} />,
+        }}
+      />
+      <Tab.Screen
+        name="Talent"
+        component={Two}
+        options={{
+          title: 'Talent',
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+        }}
+      />
+      <Tab.Screen
+        name="EOD"
+        component={Two}
+        options={{
+          title: 'Daily Reports',
+          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
+        }}
+      />
+      <Tab.Screen
+        name="Feedback"
+        component={Two}
+        options={{
+          title: 'Feedback',
+          tabBarIcon: ({ color }) => <TabBarIcon name="comments" color={color} />,
         }}
       />
     </Tab.Navigator>
